@@ -59,9 +59,10 @@ const issuesRouter = router({
       }
 
       // In a real API, logic to update issue would be written here
+      const updatedIssue = { ...existingIssue, title, description };
 
-      console.log(existingIssue);
-      return existingIssue;
+      console.log(updatedIssue);
+      return updatedIssue;
     }),
   delete: procedure
     .input(
